@@ -28,3 +28,5 @@ Route::get('/hello', function () {
 Route::post('/tasks', CreateTaskAction::class);
 
 Route::get('/tasks/{id}', GetTaskAction::class)->where('id', '[0-9]+');
+
+Route::apiResource('/articles', 'ArticleController');
